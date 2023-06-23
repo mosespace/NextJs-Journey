@@ -1,55 +1,168 @@
-*{
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+$orange: #ffa500; //this is a color variable
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
-// $primary: #ffa500;
 
-body {
-  height: 100vh;
-  width: 100vw;
-  background-image: linear-gradient(45deg, #1488CC 0%, #2B32B2 100%);
-  color: #fff;
+a {
+  text-align: none;
+}
+
+main {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+header {
+  padding: 1.5rem 0;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-}
-p{
-  flex-wrap: wrap;
-}
-.bg {
-  background-color: #4CAF50; /* Green */
-  margin-top: 5%;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+  .logo {
+    display: flex;
+    gap: 6.5rem;
+    align-items: center;
+    text-decoration: none;
+      span {
+        text-transform: uppercase;
+        font-weight: 600;
+        color: black;
+      };
+        .dot {
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          background-color: $orange;
+        };
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+      a {
+        text-decoration: none;
+        color: black;
+      }
+  }
 }
 
-.bg2 {
-  background-color: #ffa500; /* Orange */
-  margin-top: 5%;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+.hero-section {
+  padding: 2rem 0;
+  display: flex;
+  min-height: 55vh;
+  justify-content: space-between;
+  .left {
+    border-radius: 30px;
+    padding: 3rem;
+    background: url("https://www.aboghanbari.com/static/defaultcard-hover-5eef4f0957217910c705b56db7539e0f.jpg");
+    background-size: cover;
+    width: 69%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    .intro-text {
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+    .description {
+      font-size: 1.5rem;
+    }
+  }
+  .right {
+    position: relative;
+    left: 0;
+    top:0;
+    border-radius: 30px;
+    padding: 3rem;
+    background: $orange;
+    background-size: cover;
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    .my-img{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+  }
+}
+.socials {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    color: black;
+    background-color: white;
+    transition: all 0.5s ease;
+}
+  .dribble {
+    &:hover {
+      color: white;
+      background-color: #ea4c89;
+    }
+  }
+  .instagram {
+    &:hover {
+      color: white;
+      background: linear-gradient(115deg, #f9ce34, #ee2a7b, #6228d7);
+    }
+  }
+  .twitter {
+    &:hover {
+      color: white;
+      background-color: #0d6efd;
+    }
+  }
+  .linkedin {
+    &:hover {
+      color: white;
+      background-color: #0072b1;
+    }
+  }
+  .contact-link {
+    width: 200px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    padding: 1rem 3rem;
+    border-radius: 3rem;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    display: flex;
+    font-weight: 400;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.89);
+    }
+  }
 }
 
-.bg3 {
-  margin-top: 5%;
-  background-color: red; /* Black */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+.projects {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 1rem;
+  .project-card {
+    display: inline-block;
+    height: 300px;
+    position: relative;
+    img {
+      object-fit: cover;
+    }
+  }
 }
