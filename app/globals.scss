@@ -152,17 +152,58 @@ header {
   }
 }
 
-.projects {
+.all-projects {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: 1rem;
   .project-card {
     display: inline-block;
-    height: 300px;
+    height: 500px;
     position: relative;
-    img {
+
+    img: {
       object-fit: cover;
+      border-radius: 5%;
+      -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    }
+
+  }
+ 
+  .project-card:hover {
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+}
+
+.contact-section {
+  padding: 2rem 0;
+  display: flex;
+  min-height: 40vh;
+  justify-content: space-between;
+  .footer {
+    border-radius: 30px;
+    padding: 3rem;
+    background: url("https://www.aboghanbari.com/static/defaultcard-hover-5eef4f0957217910c705b56db7539e0f.jpg");
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    a{
+      padding: 0;
+      text-decoration: none;
+      // color: #000;
+    }
+    .closing-text {
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+    .footer-closeing {
+      font-size: 1rem;
     }
   }
 }

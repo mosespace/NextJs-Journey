@@ -3,14 +3,13 @@
 import Contact from "@/Components/Contact";
 import Hero from "@/Components/Hero";
 import NavBar from "@/Components/NavBar";
-import Projects from "@/Components/Projects";
-
+import AllProjects from "@/Components/AllProjects";
 export default function Home(){
   return (
   <main>
     <NavBar/>
     <Hero/>
-    <Projects/>
+    <AllProjects/>
     <Contact/>
   </main>
   )
