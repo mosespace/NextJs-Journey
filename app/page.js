@@ -1,21 +1,18 @@
 "use client";
-import SubmitButton from "@/Components/Submit-button";  // Import the Submit Button component
-import Hello from "@/components/Hello";  // Import the Hello component
+import Hello from "@/Components/Shapes";
+import SubmitButton from "@/Components/Submit-button";
+import React, {useRef, useState} from "react";
 
-function Home(){
-  const handler = () => {
-    console.log("Your leaving the Home Page");
-}
-  return (
+export default function Home(){
+  const[shapeWidth, setShapeWidth] = useState('square');
+
+  const handleClick=()=>{
+    setShapeWidth('rectangle');
+  }
+  return(
     <section>
-
-      <Hello message= "It's a message on the home"/>
-
-      <h1> Hi, Welcome; Hello World </h1>
-      <p>This is the first page </p>
-      <SubmitButton bg="bg" message=" 1" functionClick={handler}/>
-      
+      <Hello shapes={shapeWidth}/>
+      <SubmitButton bg="bg" message=" To Rectangle" functionClick={handleClick}/>
     </section>
-  )
+  );
 }
-export default Home;
